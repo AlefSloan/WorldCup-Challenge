@@ -4,7 +4,7 @@ const Title = () => (
 
 export function App() {
   return (
-    <div>
+    <div className="bg-red-500">
       <Title />
     </div>
   )
