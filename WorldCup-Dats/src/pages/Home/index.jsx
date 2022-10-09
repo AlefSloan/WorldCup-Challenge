@@ -1,4 +1,4 @@
-export function App() {
+export function Home() {
   return (
     <div className='h-screen bg-red-700 p-4 text-white flex flex-col items-center space-y-6'>
       <header className='container max-w-5xl p-4 flex justify-center'>
