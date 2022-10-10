@@ -12,12 +12,12 @@ export function Home() {
           <h1 className='text-3xl text-center md:text-left font-bold'>
             Dê o seu palpite na Copa do Mundo do Catar 2022!
           </h1>
-          <button className='bg-white text-red-700 text-xl px-8 py-5 rounded-xl'>
+          <a href='/signup' className='text-center bg-white text-red-700 text-xl px-8 py-5 rounded-xl'>
             Criar minha conta
-          </button>
-          <button className='text-white border border-white text-xl px-8 py-5 rounded-xl'>
-            Login
-          </button>
+          </a>
+          <a href='/login' className='text-center text-white border border-white text-xl px-8 py-5 rounded-xl'>
+            Fazer Login
+          </a>
         </div>
       </main>
     </div>
