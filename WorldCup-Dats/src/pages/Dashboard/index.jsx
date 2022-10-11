@@ -1,4 +1,4 @@
-import { Icon, Card } from '~/components'
+import { Icon, Card, DateSelect } from '~/components'
 
 export const Dashboard = () => {
   return (
@@ -18,10 +18,8 @@ export const Dashboard = () => {
             <h2 className='text-white text-2xl font-bold'>Qual é o seu palpite?</h2>
           </div>
         </section>
-        <div className='flex p-6 justify-center space-x-4'>
-          <Icon name='leftArrow' className='h-8'/>
-          <h4 className='text-xl font-bold text-red-700'>20 de novembro</h4>
-          <Icon name='rightArrow' className='h-8'/>
+        <div className='flex justify-center'>
+          <DateSelect />
         </div>
         <section id='content' className='container max-w-3xl p-4 space-y-6'>
           <Card
