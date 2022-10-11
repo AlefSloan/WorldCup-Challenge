@@ -1,0 +1,14 @@
+{
+  "name": "worldcup-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "author": {
+    "name": "Alef Sloan",
+    "email": "alef_sloan@hotmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.13.4"
+  }
+}
