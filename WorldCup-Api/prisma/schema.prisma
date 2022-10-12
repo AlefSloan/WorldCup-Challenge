@@ -16,7 +16,7 @@ model User {
   id String @id @default(cuid())
   name String 
   email String @unique
-  username String
+  username String @unique
   password String
 
   createdAt DateTime @default(now())
@@ -51,4 +51,6 @@ model Hunch {
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  @@unique([userId, gameId])
 }
