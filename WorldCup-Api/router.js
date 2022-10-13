@@ -9,9 +9,10 @@ export const router = new Router();
 router.get('/users', users.list);
 router.post('/users', users.create);
 
-// router.get('/hunches', hunches.list);
 router.post('/hunches', hunches.create);
 
 router.get('/games', games.list);
 
 router.get('/login', users.login)
+
+router.get('/:username', users.hunches);

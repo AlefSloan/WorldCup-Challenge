@@ -72,3 +72,22 @@ export const create = async ctx => {
     ctx.status = 500;
   }
 }
+
+export const hunches = async ctx => {
+  const username = ctx.request.params.username;
+
+  const user = await prisma.user.findUnique({ where: { username } })
+
+  if (!user) return ctx.status = 404;
+
+  try {
+    const hunches = await prisma.hunch.findMany({ where: { userId: user.id } })
+    ctx.body = {
+      hunches,
+      name: user.name
+    };
+  } catch (error) {
+    ctx.body = error;
+    ctx.status = 500;
+  }
+}
