@@ -17,12 +17,14 @@ export const SignUp = () => {
   
   const formik = useFormik({
     onSubmit: async (values) => {
-      await axios({
+      const res = await axios({
         method: 'post',
         baseURL: 'http://localhost:3000',
         url: '/users',
         data: values
       })
+
+      setAuth(res.data);
     },
     initialValues: {
       name: '',
@@ -51,7 +53,7 @@ export const SignUp = () => {
         </div>
         <form className='space-y-6 p-4'  onSubmit={ formik.handleSubmit }>
           <Input
-            name='nome'
+            name='name'
             placeholder='Digite seu nome'
             label='Seu nome'
             type='text'
@@ -61,7 +63,7 @@ export const SignUp = () => {
             onBlur={ formik.handleBlur }
           />
           <Input 
-            name='usuario'
+            name='username'
             placeholder='Digite seu usuário'
             label='Seu nome de usuário'
             type='text'
